@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+google-generativeai
+Pillow
+pytesseract
+PyMuPDF
+python-dotenv
+python-jose[cryptography]
+tesseract
