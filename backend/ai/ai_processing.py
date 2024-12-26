@@ -40,6 +40,7 @@ class MedicalDocumentProcessor:
         """
         Use Gemini AI to extract medical information from the given text (medications, treatments, etc.)
         """
+
         prompt = f"""
         Extract medical information from this text: '{text}'
         Please identify:
@@ -48,6 +49,7 @@ class MedicalDocumentProcessor:
         - Treatments (procedures, dosage, therapies, etc.)
         Format as structured data.
         """
+
         try:
             response = await self.gemini_api.generate_response(prompt)
             return self._parse_medical_info(response)
@@ -270,3 +272,4 @@ class MedicalDocumentProcessor:
         return len(self.medical_data["medications"]) > 0 or len(self.medical_data["appointments"]) > 0 or len(self.medical_data["treatments"]) > 0
 
 
+        
